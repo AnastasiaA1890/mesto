@@ -7,4 +7,9 @@
   height: 24px;
   cursor: pointer;
   box-sizing: border-box;
+  transition: opacity .3s ease-in-out;
+}
+
+.profile__button:hover {
+  opacity: .6;
 }
