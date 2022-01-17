@@ -31,6 +31,6 @@
 
 [Ссылка на проект](https://anastasiaa1890.github.io/mesto/)
 
-<img src="https://i.postimg.cc/ZqPGkhsW/Group-3.jpg" >
+<img src="https://i.postimg.cc/PrRpDg4v/Group-3.png" >
 
 </p>
