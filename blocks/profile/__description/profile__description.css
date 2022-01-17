@@ -4,6 +4,9 @@
   font-size: 18px;
   line-height: 22px;
   color: white;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 999px) {
@@ -14,6 +17,6 @@
 
 @media screen and (max-width: 767px) {
   .profile__description {
-
+    text-align: center;
   }
 }

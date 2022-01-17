@@ -11,8 +11,18 @@ const popupForm = document.querySelector('.popup__form');
 function openPopup () {
     popup.classList.add('popup_opened');
 }
+
 //Вызов функции открытия окна Popup
 profileOpenPopupButton.addEventListener('click', openPopup);
+
+//Функция заполнения формы popup
+function fillPopup() {
+    popupFieldName.value = profileName.textContent;
+    popupFieldDescription.value = profileDescription.textContent;
+}
+
+//Вызов функции заполнения формы popup
+profileOpenPopupButton.addEventListener('click', fillPopup);
 
 //Функция закрытия окна Popup
 function closePopup () {
