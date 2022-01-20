@@ -10,10 +10,8 @@ const popupForm = document.querySelector('.popup__form');
 //Функция открытия окна Popup
 function openPopup () {
     popup.classList.add('popup_opened');
+    fillPopup();
 }
-
-//Вызов функции открытия окна Popup
-profileOpenPopupButton.addEventListener('click', openPopup);
 
 //Функция заполнения формы popup
 function fillPopup() {
@@ -21,27 +19,10 @@ function fillPopup() {
     popupFieldDescription.value = profileDescription.textContent;
 }
 
-//Вызов функции заполнения формы popup
-profileOpenPopupButton.addEventListener('click', fillPopup);
-
 //Функция закрытия окна Popup
 function closePopup () {
     popup.classList.remove('popup_opened');
 }
-
-//Вызов функции закрытия окна Popup
-popupCloseButton.addEventListener('click', closePopup);
-
-//Функция очистки полей после закрытия окна Popup
-function cleanPopup() {
-    popupCloseButton.insertAdjacentText('afterbegin', popupFieldName.value);
-    popupCloseButton.insertAdjacentText('afterbegin', popupFieldDescription.value);
-    popupFieldName.value = '';
-    popupFieldDescription.value = '';
-}
-
-//Вызов функции очистки полей после закрытия окна Popup
-popupCloseButton.addEventListener('click', cleanPopup);
 
 //Функция сохранения данных полей формы Popup
 function submitFormHandler(evt) {
@@ -51,5 +32,23 @@ function submitFormHandler(evt) {
     closePopup();
 }
 
+//Вызов функции открытия окна Popup
+profileOpenPopupButton.addEventListener('click', openPopup);
+
+//Вызов функции закрытия окна Popup
+popupCloseButton.addEventListener('click', closePopup);
+
 //Вызов функции сохранения данных полей формы Popup
 popupForm.addEventListener('submit', submitFormHandler);
+
+
+/*//Функция очистки полей после закрытия окна Popup
+function cleanPopup() {
+    popupCloseButton.insertAdjacentText('afterbegin', popupFieldName.value);
+    popupCloseButton.insertAdjacentText('afterbegin', popupFieldDescription.value);
+    popupFieldName.value = '';
+    popupFieldDescription.value = '';
+}
+
+//Вызов функции очистки полей после закрытия окна Popup
+popupCloseButton.addEventListener('click', cleanPopup);*/
