@@ -9,6 +9,7 @@
 
 @media screen and (max-width: 767px) {
   .profile__fields {
-    padding-left: 0;
+    grid-template-columns: 1fr 18px;
+    gap: 5px 10px;
   }
 }

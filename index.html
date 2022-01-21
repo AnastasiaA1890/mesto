@@ -21,60 +21,56 @@
           <img src="./images/avatar.jpg" alt="Аватар пользователя" class="profile__avatar">
           <div class="profile__fields">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <div class="profile__button">
-              <img src="./images/edit_img.svg" alt="Кнопка редактирования профиля" class="profile__button-img">
-            </div>
+            <button type="button" aria-label="Кнопка редактирования профиля" class="profile__button"></button>
             <p class="profile__description">Исследователь океана</p>
           </div>
         </div>
-        <div class="profile__add-button">
-          <img src="./images/add_button_img.svg" alt="Кнопка добавления карточки" class="profile__add-button-img">
-        </div>
+        <button type="button" aria-label="Кнопка добавления карточки" class="profile__add-button"></button>
       </section>
       <!-- Секция elements -->
       <section class="elements">
-        <div class="element">
+        <article class="element">
           <img src="./images/yosemite_park.jpg" alt="Йосемити Парк" class="element__img">
           <div class="element__description">
-            <h1 class="element__title">Йосемити Парк</h1>
-            <img src="./images/like.svg" alt="Кнопка понравилось" class="element__like-button">
+            <h2 class="element__title">Йосемити Парк</h2>
+            <button type="button" aria-label="Кнопка понравилось" class="element__like-button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img src="./images/sequoia_park.jpg" alt="Национальный парк Секвойя" class="element__img">
           <div class="element__description">
-            <h1 class="element__title">Национальный парк Секвойя</h1>
-            <img src="./images/like.svg" alt="Кнопка понравилось" class="element__like-button">
+            <h2 class="element__title">Парк Секвойя</h2>
+            <button type="button" aria-label="Кнопка понравилось" class="element__like-button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img src="./images/cannon_beach.jpg" alt="Пляж Кэннон" class="element__img">
           <div class="element__description">
-            <h1 class="element__title">Пляж Кэннон</h1>
-            <img src="./images/like.svg" alt="Кнопка понравилось" class="element__like-button">
+            <h2 class="element__title">Пляж Кэннон</h2>
+            <button type="button" aria-label="Кнопка понравилось" class="element__like-button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img src="./images/crater_lake.jpg" alt="Озеро Крейтер" class="element__img">
           <div class="element__description">
-            <h1 class="element__title">Озеро Крейтер</h1>
-            <img src="./images/like.svg" alt="Кнопка понравилось" class="element__like-button">
+            <h2 class="element__title">Озеро Крейтер</h2>
+            <button type="button" aria-label="Кнопка понравилось" class="element__like-button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img src="./images/death_valley.jpg" alt="Долина Смерти" class="element__img">
           <div class="element__description">
-            <h1 class="element__title">Долина смерти</h1>
-            <img src="./images/like.svg" alt="Кнопка понравилось" class="element__like-button">
+            <h2 class="element__title">Долина смерти</h2>
+            <button type="button" aria-label="Кнопка понравилось" class="element__like-button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img src="./images/mount_hood.jpg" alt="Гора Маунт Худ" class="element__img">
           <div class="element__description">
-            <h1 class="element__title">Гора Маунт Худ</h1>
-            <img src="./images/like.svg" alt="Кнопка понравилось" class="element__like-button">
+            <h2 class="element__title">Гора Маунт Худ</h2>
+            <button type="button" aria-label="Кнопка понравилось" class="element__like-button"></button>
           </div>
-        </div>
+        </article>
       </section>
     </main>
     <!-- Секция footer -->
@@ -84,14 +80,14 @@
     <!-- Окно редактировать профиль -->
     <div class="popup">
       <div class="popup__container ">
-        <img src="./images/close_button.svg" alt="" class="popup__close-button">
-        <form class="popup__form">
-          <h3 class="popup__title">Редактировать профиль</h3>
+        <button type="button" aria-label="Кнопка закрытия окна" class="popup__close-button"></button>
+        <form class="popup__form" name="editProfile">
+          <h2 class="popup__title">Редактировать профиль</h2>
           <label class="popup__field">
-            <input type="text" placeholder="Имя" class="popup__field-name">
+            <input type="text" placeholder="Имя" name="editName" class="popup__field-input popup__field-input_name">
           </label>
           <label class="popup__field">
-            <input type="text" placeholder="О себе" class="popup__field-about">
+            <input type="text" placeholder="О себе" name="editAbout" class="popup__field-input popup__field-input_about">
           </label>
           <button type="submit" class="popup__button">Сохранить</button>
         </form>
