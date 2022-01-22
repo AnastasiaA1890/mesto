@@ -6,6 +6,7 @@
   margin: 0 auto;
   max-width: 880px;
   padding-top: 50px;
+  justify-items: center;
 }
 
 @media screen and (max-width: 999px) {
