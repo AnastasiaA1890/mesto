@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feat: Added functionality to add a new card">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feat: Added functionality to open photoPopup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/element/__description/element__description.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__description/element__description.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__title/element__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__title/element__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__img/popup__img.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__img/popup__img.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +101,8 @@
       <workItem from="1643351111917" duration="3908000" />
       <workItem from="1643416053965" duration="17962000" />
       <workItem from="1643498861652" duration="15282000" />
-      <workItem from="1643569866974" duration="39262000" />
+      <workItem from="1643569866974" duration="39965000" />
+      <workItem from="1643654581271" duration="3149000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -175,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643590786515</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: Added functionality to open photoPopup">
+      <created>1643620320160</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1643620320160</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +205,7 @@
     <MESSAGE value="fix: html and styles" />
     <MESSAGE value="fix: html and styles and fonts" />
     <MESSAGE value="feat: Added functionality to add a new card" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Added functionality to add a new card" />
+    <MESSAGE value="feat: Added functionality to open photoPopup" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Added functionality to open photoPopup" />
   </component>
 </project>

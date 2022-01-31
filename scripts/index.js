@@ -17,6 +17,7 @@ const submissionAddCardButton = document.querySelector('#add-card .popup__form')
 const photoPopup = document.querySelector('#open-photo');
 const photoPopupImg = document.querySelector('.popup__img');
 const photoPopupTitle = document.querySelector('.popup__photo-title');
+const photoPopupCloseButton = document.querySelector('#open-photo button.popup__close-button')
 
 const initialCards = [
     {
@@ -59,6 +60,7 @@ function renderCards(element) {
 function render() {
     initialCards.forEach(renderCards);
 }
+
 //Вызов функции отображение списка карточек
 render();
 
@@ -146,7 +148,7 @@ function closePopup () {
     photoPopup.classList.remove('popup_opened');
 }
 
-//Функции вызывов
+//Функции вызовов
 //Функция вызова элементов (удаление карточки, like)
 function addListeners(el) { //Будет передаваться элемент newCard из renderCards
     el.querySelector('.element__delete-button').addEventListener('click', deleteCard);
@@ -162,7 +164,7 @@ profilePopupCloseButton.addEventListener('click', closePopup);
 //Вызов функции закрытия окна AddCardPopup
 cardPopupCloseButton.addEventListener('click', closePopup);
 //Вызов функции закрытия окна PhotoPopup
-photoPopup.addEventListener('click', closePopup);
+photoPopupCloseButton.addEventListener('click', closePopup);
 //Вызов функции сохранения данных полей формы Popup
 popupForm.addEventListener('submit', submitEditFormHandler);
 //Функция добавления новой карточки
