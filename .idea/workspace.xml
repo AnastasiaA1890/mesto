@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feat: Added functionality to open photoPopup">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__description/element__description.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__description/element__description.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__title/element__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__title/element__title.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__img/popup__img.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__img/popup__img.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed alt on 74 and 81 lines" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +96,7 @@
       <workItem from="1643416053965" duration="17962000" />
       <workItem from="1643498861652" duration="15282000" />
       <workItem from="1643569866974" duration="39965000" />
-      <workItem from="1643654581271" duration="3149000" />
+      <workItem from="1643654581271" duration="3526000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -181,7 +175,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643620320160</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: Added functionality to close photoPopup">
+      <created>1643657798925</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643657798925</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix: Fixed alt on 74 and 81 lines">
+      <created>1643658104862</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643658104862</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +214,8 @@
     <MESSAGE value="fix: html and styles and fonts" />
     <MESSAGE value="feat: Added functionality to add a new card" />
     <MESSAGE value="feat: Added functionality to open photoPopup" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Added functionality to open photoPopup" />
+    <MESSAGE value="feat: Added functionality to close photoPopup" />
+    <MESSAGE value="fix: Fixed alt on 74 and 81 lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed alt on 74 and 81 lines" />
   </component>
 </project>
