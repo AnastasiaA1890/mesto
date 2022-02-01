@@ -46,12 +46,18 @@ const initialCards = [
     }
 ];
 
+/*//Функция создания карточек
+function createCard(item) {
+
+}*/
+
 //Функция отображения списка карточек, лайки
-function renderCards(element) {
+function renderCards(item) {
     const newCard = template.cloneNode(true);
-    newCard.querySelector('.element__img').src = element.link;
-    newCard.querySelector('.element__title').textContent = element.name;
-    newCard.querySelector('.element__img').alt = element.name;
+    newCard.querySelector('.element__img').src = item.link;
+    newCard.querySelector('.element__title').textContent = item.name;
+    newCard.querySelector('.element__img').alt = item.name;
+
     addListeners(newCard);
     cardsList.appendChild(newCard);
 }
@@ -64,10 +70,21 @@ function render() {
 //Вызов функции отображение списка карточек
 render();
 
+//Общие функции
+//Функция открытия окна Popup
+function openPopup(popup) {
+    popup.classList.add('popup_opened');
+}
+
+//Функция закрытия окна Popup
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+}
+
 //Окно EditProfilePopup
 //Функция открытия окна EditProfilePopup
 function openEditProfilePopup () {
-    profilePopup.classList.add('popup_opened');
+    openPopup(profilePopup);
     fillPopup();
 }
 
@@ -82,13 +99,15 @@ function submitEditFormHandler(evt) {
     evt.preventDefault();
     profileName.textContent = popupFieldName.value;
     profileDescription.textContent = popupFieldDescription.value;
-    closePopup();
+    closePopup(profilePopup);
 }
 
 //Окно AddCardPopup
-//Функция открытия окна AddCardPopup
+//Функция открытия и очистки полей окна AddCardPopup после закрытия
 function openAddCardPopup() {
-    cardPopup.classList.add('popup_opened');
+    openPopup(cardPopup);
+    popupFieldSrc.value = '';
+    popupFieldTitle.value = '';
 }
 
 //Функция добавления нового объекта в массив initialCards
@@ -110,13 +129,7 @@ function renderAddedCard(evt) {
     addCard(card);
     addListeners(card);
     cardsList.prepend(card);
-    closePopup();
-}
-
-//Функция очистки полей после закрытия окна AddCardPopup
-function cleanPopup() {
-    popupFieldSrc.value = '';
-    popupFieldTitle.value = '';
+    closePopup(cardPopup);
 }
 
 //Функция удаления карточки Elements
@@ -130,22 +143,13 @@ function like(event) {
 }
 
 //Окно photoPopup
-//Открытие окна photoPopup
+//Заполнение окна photoPopup данными
 function openPhotoPopup(evt) {
     if(evt.target.classList.contains('element__img')){
-        photoPopup.classList.add('popup_opened');
+        openPopup(photoPopup);
         photoPopupImg.src = evt.target.src;
         photoPopupTitle.textContent = evt.target.alt;
     }
-}
-
-//Общие функции
-//Функция закрытия окн EditProfilePopup или AddCardPopup или PhotoPopup
-function closePopup () {
-    profilePopup.classList.remove('popup_opened');
-    cardPopup.classList.remove('popup_opened');
-    submissionAddCardButton.classList.remove('popup_opened');
-    photoPopup.classList.remove('popup_opened');
 }
 
 //Функции вызовов
@@ -160,16 +164,14 @@ profilePopupButton.addEventListener('click', openEditProfilePopup);
 //Вызов функции открытия окна AddCardPopup
 cardPopupButton.addEventListener('click', openAddCardPopup);
 //Вызов функции закрытия окна EditProfilePopup
-profilePopupCloseButton.addEventListener('click', closePopup);
+profilePopupCloseButton.addEventListener('click', () => closePopup(profilePopup));
 //Вызов функции закрытия окна AddCardPopup
-cardPopupCloseButton.addEventListener('click', closePopup);
+cardPopupCloseButton.addEventListener('click', () => closePopup(cardPopup));
 //Вызов функции закрытия окна PhotoPopup
-photoPopupCloseButton.addEventListener('click', closePopup);
+photoPopupCloseButton.addEventListener('click', () => closePopup(photoPopup));
 //Вызов функции сохранения данных полей формы Popup
 popupForm.addEventListener('submit', submitEditFormHandler);
 //Функция добавления новой карточки
 submissionAddCardButton.addEventListener('submit', renderAddedCard);
-//Вызов функции очистки полей после закрытия окна Popup
-cardPopupButton.addEventListener('click', cleanPopup);
 //Вызов функции открытия окна OpenPopup
 cardsList.addEventListener('click', openPhotoPopup);

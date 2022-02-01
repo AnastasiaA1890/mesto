@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed alt on 74 and 81 lines" />
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed src on 74 and 81 lines">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +100,8 @@
       <workItem from="1643416053965" duration="17962000" />
       <workItem from="1643498861652" duration="15282000" />
       <workItem from="1643569866974" duration="39965000" />
-      <workItem from="1643654581271" duration="3526000" />
+      <workItem from="1643654581271" duration="3983000" />
+      <workItem from="1643665074084" duration="18650000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -189,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643658104862</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: Fixed src on 74 and 81 lines">
+      <created>1643658298756</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1643658298756</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +228,7 @@
     <MESSAGE value="feat: Added functionality to open photoPopup" />
     <MESSAGE value="feat: Added functionality to close photoPopup" />
     <MESSAGE value="fix: Fixed alt on 74 and 81 lines" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed alt on 74 and 81 lines" />
+    <MESSAGE value="fix: Fixed src on 74 and 81 lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed src on 74 and 81 lines" />
   </component>
 </project>
