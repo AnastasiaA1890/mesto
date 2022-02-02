@@ -12,7 +12,7 @@ const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 const popupForm = document.querySelector('.popup__form');
 const template = document.querySelector('#elements-items').content;
-const cardsList = document.querySelector('.elements');
+const elements = document.querySelector('.elements');
 const submissionAddCardButton = document.querySelector('#add-card .popup__form');
 const photoPopup = document.querySelector('#open-photo');
 const photoPopupImg = document.querySelector('.popup__img');
@@ -46,25 +46,21 @@ const initialCards = [
     }
 ];
 
-/*//Функция создания карточек
+//Функция создания карточки
 function createCard(item) {
-
-}*/
-
-//Функция отображения списка карточек, лайки
-function renderCards(item) {
     const newCard = template.cloneNode(true);
     newCard.querySelector('.element__img').src = item.link;
     newCard.querySelector('.element__title').textContent = item.name;
     newCard.querySelector('.element__img').alt = item.name;
-
     addListeners(newCard);
-    cardsList.appendChild(newCard);
+    return newCard;
 }
 
-//Функция перебора карточек через функцию renderCards
+//Функция перебора карточек
 function render() {
-    initialCards.forEach(renderCards);
+    initialCards.forEach((item)=>{
+        elements.appendChild(createCard(item));
+    });
 }
 
 //Вызов функции отображение списка карточек
@@ -110,26 +106,22 @@ function openAddCardPopup() {
     popupFieldTitle.value = '';
 }
 
-//Функция добавления нового объекта в массив initialCards
-function addCard() {
-    let newCard = {
-        name: popupFieldTitle.value,
-        link: popupFieldSrc.value
-    }
-    initialCards.unshift(newCard);
-}
+//Также можно добавить данные из инпутов в массив таким способом
+/*function initNewCard(name, link) {
+    this.name = name;
+    this.link = link;
+}*/
 
 //Функция добавления новой карточки из функции addCard
 function renderAddedCard(evt) {
     evt.preventDefault();
-    const card = template.cloneNode(true);
-    card.querySelector('.element__img').src = popupFieldSrc.value;
-    card.querySelector('.element__title').textContent = popupFieldTitle.value;
-    card.querySelector('.element__img').alt = popupFieldTitle.value;
-    addCard(card);
-    addListeners(card);
-    cardsList.prepend(card);
-    closePopup(cardPopup);
+    const newCard = {
+        name: popupFieldTitle.value,
+        link: popupFieldSrc.value}
+    //const newCard = new initNewCard(popupFieldTitle.value, popupFieldSrc.value)  //относится к строке 109
+    initialCards.push(newCard);
+    elements.prepend(createCard(newCard));
+    closePopup(cardPopup)
 }
 
 //Функция удаления карточки Elements
@@ -153,10 +145,11 @@ function openPhotoPopup(evt) {
 }
 
 //Функции вызовов
-//Функция вызова элементов (удаление карточки, like)
+//Функция вызова элементов (удаление карточки, like, открытие картинки)
 function addListeners(el) { //Будет передаваться элемент newCard из renderCards
     el.querySelector('.element__delete-button').addEventListener('click', deleteCard);
     el.querySelector('.element__like-button').addEventListener('click', like);
+    el.querySelector('.element__img').addEventListener('click', openPhotoPopup);
 }
 
 //Вызов функции открытия окна EditProfilePopup
@@ -174,4 +167,4 @@ popupForm.addEventListener('submit', submitEditFormHandler);
 //Функция добавления новой карточки
 submissionAddCardButton.addEventListener('submit', renderAddedCard);
 //Вызов функции открытия окна OpenPopup
-cardsList.addEventListener('click', openPhotoPopup);
+elements.addEventListener('click', openPhotoPopup);
