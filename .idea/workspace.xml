@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed some bags">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed render createCard function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
@@ -47,7 +47,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -102,7 +102,10 @@
       <workItem from="1643654581271" duration="3983000" />
       <workItem from="1643665074084" duration="25311000" />
       <workItem from="1643737174354" duration="10435000" />
-      <workItem from="1643768175357" duration="2668000" />
+      <workItem from="1643768175357" duration="3119000" />
+      <workItem from="1643786374442" duration="628000" />
+      <workItem from="1643791824445" duration="58000" />
+      <workItem from="1643829035855" duration="4165000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -209,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643695460408</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix: Fixed render createCard function">
+      <created>1643770961001</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1643770961001</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +248,7 @@
     <MESSAGE value="fix: Fixed alt on 74 and 81 lines" />
     <MESSAGE value="fix: Fixed src on 74 and 81 lines" />
     <MESSAGE value="fix: Fixed some bags" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed some bags" />
+    <MESSAGE value="fix: Fixed render createCard function" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed render createCard function" />
   </component>
 </project>

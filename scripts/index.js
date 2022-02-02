@@ -51,7 +51,6 @@ function createCard(item) {
     const newCard = template.cloneNode(true);
     newCard.querySelector('.element__img').src = item.link;
     newCard.querySelector('.element__title').textContent = item.name;
-    newCard.querySelector('.element__img').alt = item.name;
     addListeners(newCard);
     return newCard;
 }
@@ -140,7 +139,7 @@ function openPhotoPopup(evt) {
     if(evt.target.classList.contains('element__img')){
         openPopup(photoPopup);
         photoPopupImg.src = evt.target.src;
-        photoPopupTitle.textContent = evt.target.alt;
+        photoPopupTitle.textContent = evt.target.closest('.element').querySelector('.element__title').textContent;
     }
 }
 
@@ -166,5 +165,3 @@ photoPopupCloseButton.addEventListener('click', () => closePopup(photoPopup));
 popupForm.addEventListener('submit', submitEditFormHandler);
 //Функция добавления новой карточки
 submissionAddCardButton.addEventListener('submit', renderAddedCard);
-//Вызов функции открытия окна OpenPopup
-elements.addEventListener('click', openPhotoPopup);
