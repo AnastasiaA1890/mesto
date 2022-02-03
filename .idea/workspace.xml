@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed render createCard function">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed alt attribute display">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
@@ -105,7 +105,9 @@
       <workItem from="1643768175357" duration="3119000" />
       <workItem from="1643786374442" duration="628000" />
       <workItem from="1643791824445" duration="58000" />
-      <workItem from="1643829035855" duration="4165000" />
+      <workItem from="1643829035855" duration="4889000" />
+      <workItem from="1643854351015" duration="3520000" />
+      <workItem from="1643870479888" duration="621000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -219,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643770961001</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix: Fixed alt attribute display">
+      <created>1643833340310</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1643833340310</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +258,7 @@
     <MESSAGE value="fix: Fixed src on 74 and 81 lines" />
     <MESSAGE value="fix: Fixed some bags" />
     <MESSAGE value="fix: Fixed render createCard function" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed render createCard function" />
+    <MESSAGE value="fix: Fixed alt attribute display" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed alt attribute display" />
   </component>
 </project>

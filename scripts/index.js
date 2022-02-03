@@ -51,6 +51,7 @@ function createCard(item) {
     const newCard = template.cloneNode(true);
     newCard.querySelector('.element__img').src = item.link;
     newCard.querySelector('.element__title').textContent = item.name;
+    newCard.querySelector('.element__img').alt = item.name;
     addListeners(newCard);
     return newCard;
 }
@@ -118,7 +119,6 @@ function renderAddedCard(evt) {
         name: popupFieldTitle.value,
         link: popupFieldSrc.value}
     //const newCard = new initNewCard(popupFieldTitle.value, popupFieldSrc.value)  //относится к строке 109
-    initialCards.push(newCard);
     elements.prepend(createCard(newCard));
     closePopup(cardPopup)
 }
@@ -140,6 +140,7 @@ function openPhotoPopup(evt) {
         openPopup(photoPopup);
         photoPopupImg.src = evt.target.src;
         photoPopupTitle.textContent = evt.target.closest('.element').querySelector('.element__title').textContent;
+        photoPopupImg.alt = evt.target.alt;
     }
 }
 
