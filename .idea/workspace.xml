@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed alt attribute display">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed alt attribute display, deleted push to array">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
@@ -108,6 +108,14 @@
       <workItem from="1643829035855" duration="4889000" />
       <workItem from="1643854351015" duration="3520000" />
       <workItem from="1643870479888" duration="621000" />
+      <workItem from="1643910626441" duration="524000" />
+      <workItem from="1643917062492" duration="142000" />
+      <workItem from="1643918866256" duration="598000" />
+      <workItem from="1644006090125" duration="1358000" />
+      <workItem from="1644043906983" duration="1207000" />
+      <workItem from="1644094405331" duration="692000" />
+      <workItem from="1644128026483" duration="227000" />
+      <workItem from="1644128268589" duration="4334000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -228,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643833340310</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix: Fixed alt attribute display, deleted push to array">
+      <created>1643910801224</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1643910801224</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +274,7 @@
     <MESSAGE value="fix: Fixed some bags" />
     <MESSAGE value="fix: Fixed render createCard function" />
     <MESSAGE value="fix: Fixed alt attribute display" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed alt attribute display" />
+    <MESSAGE value="fix: Fixed alt attribute display, deleted push to array" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed alt attribute display, deleted push to array" />
   </component>
 </project>

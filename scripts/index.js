@@ -68,13 +68,13 @@ render();
 
 //Общие функции
 //Функция открытия окна Popup
-function openPopup(popup) {
-    popup.classList.add('popup_opened');
+function openPopup(element) {
+    element.classList.add('popup_opened');
 }
 
 //Функция закрытия окна Popup
-function closePopup(popup) {
-    popup.classList.remove('popup_opened');
+function closePopup(element) {
+    element.classList.remove('popup_opened');
 }
 
 //Окно EditProfilePopup
