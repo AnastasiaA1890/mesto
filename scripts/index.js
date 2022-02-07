@@ -1,24 +1,33 @@
-const profilePopupButton = document.querySelector('.profile__button');
-const cardPopupButton = document.querySelector('.profile__add-button');
-const profilePopup = document.querySelector('#edit-profile');
-const cardPopup = document.querySelector('#add-card');
-const profilePopupCloseButton = document.querySelector('.popup__close-button');
-const cardPopupCloseButton = document.querySelector('#add-card  button.popup__close-button');
-const popupFieldName = document.querySelector('.popup__input_field_name');
-const popupFieldDescription = document.querySelector('.popup__input_field_about');
-const popupFieldSrc = document.querySelector('.popup__input_src');
-const popupFieldTitle = document.querySelector('.popup__input_title');
-const profileName = document.querySelector('.profile__name');
-const profileDescription = document.querySelector('.profile__description');
+//Общие переменные
 const popupForm = document.querySelector('.popup__form');
+const popupButton = document.querySelector('.popup__button');
+//Переменные блока Template
 const template = document.querySelector('#elements-items').content;
 const elements = document.querySelector('.elements');
-const submissionAddCardButton = document.querySelector('#add-card .popup__form');
+//Переменные секции Profile
+const profilePopupButton = document.querySelector('.profile__button');
+const cardPopupButton = document.querySelector('.profile__add-button');
+const profileName = document.querySelector('.profile__name');
+const profileDescription = document.querySelector('.profile__description');
+//Переменные PopupEdit Form
+const profilePopup = document.querySelector('#edit-profile');
+const formEditProfile = document.forms.editProfile;
+const popupFieldName = formEditProfile.elements.editName;
+const popupFieldDescription = formEditProfile.elements.editAbout;
+const profilePopupCloseButton = document.querySelector('.popup__close-button');
+//Переменные PopupAddCard
+const cardPopup = document.querySelector('#add-card');
+const formAdd = document.forms.addCard;
+const popupFieldSrc = formAdd.elements.cardLink;
+const popupFieldTitle = formAdd.elements.cardName;
+const cardPopupCloseButton = document.querySelector('#add-card  button.popup__close-button');
+//Переменные PopupPhoto
 const photoPopup = document.querySelector('#open-photo');
 const photoPopupImg = document.querySelector('.popup__img');
 const photoPopupTitle = document.querySelector('.popup__photo-title');
 const photoPopupCloseButton = document.querySelector('#open-photo button.popup__close-button')
 
+//Массив карточек
 const initialCards = [
     {
         name: 'Йосемити Парк',
@@ -102,8 +111,7 @@ function submitEditFormHandler(evt) {
 //Функция открытия и очистки полей окна AddCardPopup после закрытия
 function openAddCardPopup() {
     openPopup(cardPopup);
-    popupFieldSrc.value = '';
-    popupFieldTitle.value = '';
+    formAdd.reset();
 }
 
 //Также можно добавить данные из инпутов в массив таким способом
@@ -154,10 +162,10 @@ function addListeners(el) { //Будет передаваться элемент
 
 //Вызов функции открытия окна EditProfilePopup
 profilePopupButton.addEventListener('click', openEditProfilePopup);
-//Вызов функции открытия окна AddCardPopup
-cardPopupButton.addEventListener('click', openAddCardPopup);
 //Вызов функции закрытия окна EditProfilePopup
 profilePopupCloseButton.addEventListener('click', () => closePopup(profilePopup));
+//Вызов функции открытия окна AddCardPopup
+cardPopupButton.addEventListener('click', openAddCardPopup);
 //Вызов функции закрытия окна AddCardPopup
 cardPopupCloseButton.addEventListener('click', () => closePopup(cardPopup));
 //Вызов функции закрытия окна PhotoPopup
@@ -165,4 +173,23 @@ photoPopupCloseButton.addEventListener('click', () => closePopup(photoPopup));
 //Вызов функции сохранения данных полей формы Popup
 popupForm.addEventListener('submit', submitEditFormHandler);
 //Функция добавления новой карточки
-submissionAddCardButton.addEventListener('submit', renderAddedCard);
+formAdd.addEventListener('submit', renderAddedCard);
+//Закрытие окон Popup кликом на overlay
+profilePopup.addEventListener('click', function (evt)  {
+    if(evt.target === evt.currentTarget){
+        closePopup(profilePopup);
+    }
+})
+cardPopup.addEventListener('click', function (evt)  {
+    if(evt.target === evt.currentTarget){
+        closePopup(cardPopup);
+    }
+})
+photoPopup.addEventListener('click', function (evt)  {
+    if(evt.target === evt.currentTarget){
+        closePopup(photoPopup);
+    }
+})
+popupFieldName.addEventListener('input', function (evt) {
+    console.log(evt.target.validity)
+})

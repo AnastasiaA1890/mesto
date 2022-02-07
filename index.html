@@ -39,13 +39,15 @@
     <div class="popup" id="edit-profile">
       <div class="popup__container ">
         <button type="button" aria-label="Кнопка закрытия окна" class="popup__close-button"></button>
-        <form class="popup__form" name="editProfile">
+        <form class="popup__form" name="editProfile" novalidate>
           <h2 class="popup__title">Редактировать профиль</h2>
           <label class="popup__field">
-            <input type="text" placeholder="Имя" name="editName" class="popup__input popup__input_field_name">
+            <input type="text" placeholder="Имя" name="editName" class="popup__input popup__input_field_name" required minlength="2" maxlength="40">
+            <span class="popup__error_visible"></span>
           </label>
           <label class="popup__field">
-            <input type="text" placeholder="О себе" name="editAbout" class="popup__input popup__input_field_about">
+            <input type="text" placeholder="О себе" name="editAbout" class="popup__input popup__input_field_about" required minlength="2" maxlength="200">
+            <span class="popup__error_visible"></span>
           </label>
           <button type="submit" class="popup__button">Сохранить</button>
         </form>
@@ -55,13 +57,15 @@
     <div class="popup" id="add-card">
       <div class="popup__container ">
         <button type="button" aria-label="Кнопка закрытия окна" class="popup__close-button"></button>
-        <form class="popup__form" name="addCard">
+        <form class="popup__form" name="addCard" novalidate>
           <h2 class="popup__title">Новое место</h2>
           <label class="popup__field">
-            <input type="text" placeholder="Название" name="cardName" class="popup__input popup__input_title">
+            <input type="text" placeholder="Название" name="cardName" class="popup__input popup__input_title" minlength="2" maxlength="30" required>
+            <span class="popup__error_visible"></span>
           </label>
           <label class="popup__field">
-            <input type="text" placeholder="Ссылка на картинку" name="cardLink" class="popup__input popup__input_src">
+            <input type="url" placeholder="Ссылка на картинку" name="cardLink" class="popup__input popup__input_src" required>
+            <span class="popup__error_visible"></span>
           </label>
           <button type="submit" class="popup__button">Сохранить</button>
         </form>
@@ -88,5 +92,6 @@
     </template>
   </div>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 </html>
