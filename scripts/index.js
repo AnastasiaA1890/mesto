@@ -1,6 +1,5 @@
 //Общие переменные
 const popupForm = document.querySelector('.popup__form');
-const popupButton = document.querySelector('.popup__button');
 //Переменные блока Template
 const template = document.querySelector('#elements-items').content;
 const elements = document.querySelector('.elements');
@@ -79,11 +78,14 @@ render();
 //Функция открытия окна Popup
 function openPopup(element) {
     element.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupEsc);
+    element.addEventListener('click', closePopupOverlay);
 }
 
 //Функция закрытия окна Popup
 function closePopup(element) {
     element.classList.remove('popup_opened');
+    document.addEventListener('keydown', closePopupEsc);
 }
 
 //Окно EditProfilePopup
@@ -160,6 +162,21 @@ function addListeners(el) { //Будет передаваться элемент
     el.querySelector('.element__img').addEventListener('click', openPhotoPopup);
 }
 
+//Закрытие окон Popup кликом на overlay
+function closePopupOverlay(evt) {
+    if(evt.target === evt.currentTarget) {
+        closePopup(evt.target);
+    }
+}
+
+//Закрытие окон Popup на клавишу Escape
+function closePopupEsc(evt) {
+    if(evt.key==='Escape') {
+        const popupListEsc = Array.from(document.querySelectorAll('.popup'));
+        popupListEsc.forEach(closePopup);
+    }
+}
+
 //Вызов функции открытия окна EditProfilePopup
 profilePopupButton.addEventListener('click', openEditProfilePopup);
 //Вызов функции закрытия окна EditProfilePopup
@@ -174,22 +191,3 @@ photoPopupCloseButton.addEventListener('click', () => closePopup(photoPopup));
 popupForm.addEventListener('submit', submitEditFormHandler);
 //Функция добавления новой карточки
 formAdd.addEventListener('submit', renderAddedCard);
-//Закрытие окон Popup кликом на overlay
-profilePopup.addEventListener('click', function (evt)  {
-    if(evt.target === evt.currentTarget){
-        closePopup(profilePopup);
-    }
-})
-cardPopup.addEventListener('click', function (evt)  {
-    if(evt.target === evt.currentTarget){
-        closePopup(cardPopup);
-    }
-})
-photoPopup.addEventListener('click', function (evt)  {
-    if(evt.target === evt.currentTarget){
-        closePopup(photoPopup);
-    }
-})
-popupFieldName.addEventListener('input', function (evt) {
-    console.log(evt.target.validity)
-})

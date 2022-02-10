@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: Fixed alt attribute display, deleted push to array">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feature: added new functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__button/_disabled/popup__button_disabled.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__button/_disabled/popup__button_disabled.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__error_visible/popup__error_visible.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__error_visible/popup__error_visible.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +128,9 @@
       <workItem from="1644190369148" duration="5387000" />
       <workItem from="1644198580064" duration="4170000" />
       <workItem from="1644208803028" duration="2551000" />
+      <workItem from="1644281944704" duration="10348000" />
+      <workItem from="1644367071520" duration="11512000" />
+      <workItem from="1644456971408" duration="10610000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -291,6 +297,7 @@
     <MESSAGE value="fix: Fixed render createCard function" />
     <MESSAGE value="fix: Fixed alt attribute display" />
     <MESSAGE value="fix: Fixed alt attribute display, deleted push to array" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Fixed alt attribute display, deleted push to array" />
+    <MESSAGE value="feature: added new functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: added new functionality" />
   </component>
 </project>
