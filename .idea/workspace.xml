@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feature: added new functionality">
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__error-visible/_active/popup__error-visible_active.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__error_visible/_active/popup__error_visible_active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__error/_visible/popup__error_visible_active.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__error_visible/popup__error_visible.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__error/_visible/popup__error_visible.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__error/_visible/popup__error_visible.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__error-visible/popup__error-visible.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__error/_visible/popup__error_visible_active.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +55,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/blocks/popup/__error" />
+      <recent name="$PROJECT_DIR$/blocks/popup/__error/_visible" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/index.js" working-dir="$PROJECT_DIR$/scripts">
@@ -126,7 +135,7 @@
       <workItem from="1644208803028" duration="2551000" />
       <workItem from="1644281944704" duration="10348000" />
       <workItem from="1644367071520" duration="11512000" />
-      <workItem from="1644456971408" duration="11494000" />
+      <workItem from="1644456971408" duration="11909000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -268,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644473088283</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feature: added new functionality">
+      <created>1644473752390</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1644473752390</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
