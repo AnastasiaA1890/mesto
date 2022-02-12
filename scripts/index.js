@@ -115,9 +115,6 @@ function handleProfileFormSubmit(evt) {
 //Функция открытия и очистки полей окна AddCardPopup после закрытия
 function openAddCardPopup() {
     openPopup(cardPopup);
-    popupAddCardSubmitButton.classList.add('popup__button_disabled');
-    popupAddCardSubmitButton.setAttribute('disabled', true);
-    
 }
 
 //Также можно добавить данные из инпутов в массив таким способом
@@ -134,13 +131,10 @@ function renderAddedCard(evt) {
         link: popupFieldSrc.value}
     //const newCard = new initNewCard(popupFieldTitle.value, popupFieldSrc.value)  //относится к строке 109
     elements.prepend(createCard(newCard));
-    if (popupFieldSrc.value.length < 0 && popupFieldName.value.length< 0){
-        cardPopupCloseButton.setAttribute('disabled', true);
-    }else {
-        cardPopupCloseButton.removeAttribute('disabled');
-    }
     closePopup(cardPopup);
     formAdd.reset();
+    popupAddCardSubmitButton.classList.add('popup__button_disabled');
+    popupAddCardSubmitButton.setAttribute('disabled', true);
 }
 
 //Функция удаления карточки Elements

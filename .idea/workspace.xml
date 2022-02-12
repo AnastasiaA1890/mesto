@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feature: added new functionality">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: fixed bugs (1st iteration)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
@@ -132,7 +132,8 @@
       <workItem from="1644367071520" duration="11512000" />
       <workItem from="1644456971408" duration="12403000" />
       <workItem from="1644543187133" duration="10154000" />
-      <workItem from="1644635086498" duration="1876000" />
+      <workItem from="1644635086498" duration="2692000" />
+      <workItem from="1644690636327" duration="621000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -288,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644474293968</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix: fixed bugs (1st iteration)">
+      <created>1644639876254</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1644639876254</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +329,7 @@
     <MESSAGE value="fix: Fixed alt attribute display" />
     <MESSAGE value="fix: Fixed alt attribute display, deleted push to array" />
     <MESSAGE value="feature: added new functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: added new functionality" />
+    <MESSAGE value="fix: fixed bugs (1st iteration)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fixed bugs (1st iteration)" />
   </component>
 </project>
