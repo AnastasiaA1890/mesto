@@ -1,5 +1,6 @@
+import Card from "./Card.js";
 //Переменные блока Template
-const template = document.querySelector('#elements-items').content;
+//const template = document.querySelector('#elements-items').content;
 const elements = document.querySelector('.elements');
 //Переменные секции Profile
 const profilePopupButton = document.querySelector('.profile__button');
@@ -55,13 +56,7 @@ const initialCards = [
 
 //Функция создания карточки
 function createCard(item) {
-    const newCard = template.cloneNode(true);
-    const elementPhoto = newCard.querySelector('.element__img');
-    const elementText =  newCard.querySelector('.element__title');
-    elementPhoto.src = item.link;
-    elementText.textContent = item.name;
-    elementPhoto.setAttribute('alt',  item.name);
-    addListeners(newCard);
+    const newCard = new Card(item, '#elements-items', openPhotoPopup).generateCard();
     return newCard;
 }
 
@@ -117,19 +112,12 @@ function openAddCardPopup() {
     openPopup(cardPopup);
 }
 
-//Также можно добавить данные из инпутов в массив таким способом
-/*function initNewCard(name, link) {
-    this.name = name;
-    this.link = link;
-}*/
-
 //Функция добавления новой карточки из функции addCard
 function renderAddedCard(evt) {
     evt.preventDefault();
     const newCard = {
         name: popupFieldTitle.value,
         link: popupFieldSrc.value}
-    //const newCard = new initNewCard(popupFieldTitle.value, popupFieldSrc.value)  //относится к строке 109
     elements.prepend(createCard(newCard));
     closePopup(cardPopup);
     formAdd.reset();
@@ -137,33 +125,13 @@ function renderAddedCard(evt) {
     popupAddCardSubmitButton.setAttribute('disabled', true);
 }
 
-//Функция удаления карточки Elements
-function deleteCard(event) {
-    event.target.closest('.element').remove();
-}
-
-//Функция проставления like
-function like(event) {
-    event.target.classList.toggle('element__like-button_active');
-}
-
 //Окно photoPopup
 //Заполнение окна photoPopup данными
-function openPhotoPopup(evt) {
-    if(evt.target.classList.contains('element__img')){
+function openPhotoPopup(name, link) {
         openPopup(photoPopup);
-        photoPopupImg.src = evt.target.src;
-        photoPopupTitle.textContent = evt.target.alt;
-        photoPopupImg.alt = evt.target.alt;
-    }
-}
-
-//Функции вызовов
-//Функция вызова элементов (удаление карточки, like, открытие картинки)
-function addListeners(el) { //Будет передаваться элемент newCard из renderCards
-    el.querySelector('.element__delete-button').addEventListener('click', deleteCard);
-    el.querySelector('.element__like-button').addEventListener('click', like);
-    el.querySelector('.element__img').addEventListener('click', openPhotoPopup);
+        photoPopupImg.src = link;
+        photoPopupTitle.textContent = name;
+        photoPopupImg.alt = name;
 }
 
 //Закрытие окон Popup кликом на overlay

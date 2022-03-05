@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: fixed bugs (1st iteration)">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="refactor: add class Card for rendering cards">
+      <change afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/page/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/page/page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,7 +51,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -57,10 +60,17 @@
       <recent name="$PROJECT_DIR$/blocks/popup/__error/_visible" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/index.js" working-dir="$PROJECT_DIR$/scripts">
+  <component name="RunManager" selected="Node.js.index.js">
+    <configuration name="Unnamed" type="JavascriptDebugType" nameIsGenerated="true">
       <method v="2" />
     </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/scripts">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Unnamed" />
+      <item itemvalue="Node.js.index.js" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.index.js" />
@@ -133,7 +143,27 @@
       <workItem from="1644456971408" duration="12403000" />
       <workItem from="1644543187133" duration="10154000" />
       <workItem from="1644635086498" duration="2692000" />
-      <workItem from="1644690636327" duration="621000" />
+      <workItem from="1644690636327" duration="909000" />
+      <workItem from="1644720298431" duration="665000" />
+      <workItem from="1644769176383" duration="1026000" />
+      <workItem from="1644770244664" duration="10000" />
+      <workItem from="1644804365012" duration="4686000" />
+      <workItem from="1644817616178" duration="27000" />
+      <workItem from="1644892684727" duration="1213000" />
+      <workItem from="1644905347142" duration="644000" />
+      <workItem from="1644974048559" duration="2682000" />
+      <workItem from="1645065725882" duration="14000" />
+      <workItem from="1645068068142" duration="732000" />
+      <workItem from="1645151486694" duration="598000" />
+      <workItem from="1645325278625" duration="3492000" />
+      <workItem from="1645407135447" duration="21000" />
+      <workItem from="1645760130417" duration="2000" />
+      <workItem from="1645763555102" duration="605000" />
+      <workItem from="1645843611835" duration="13000" />
+      <workItem from="1646459943125" duration="4345000" />
+      <workItem from="1646500501064" duration="2570000" />
+      <workItem from="1646503584363" duration="1404000" />
+      <workItem from="1646505700520" duration="9504000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -296,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644639876254</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fix: fixed bugs (2nd iteration)">
+      <created>1644691416284</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1644691416285</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +367,8 @@
     <MESSAGE value="fix: Fixed alt attribute display, deleted push to array" />
     <MESSAGE value="feature: added new functionality" />
     <MESSAGE value="fix: fixed bugs (1st iteration)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fixed bugs (1st iteration)" />
+    <MESSAGE value="fix: fixed bugs (2nd iteration)" />
+    <MESSAGE value="refactor: add class Card for rendering cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: add class Card for rendering cards" />
   </component>
 </project>
