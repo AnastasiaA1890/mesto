@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="refactor: add class Card for rendering cards">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="refactor: add class FormValidator for validation forms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/FormValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +165,9 @@
       <workItem from="1646505700520" duration="15603000" />
       <workItem from="1646591203970" duration="9980000" />
       <workItem from="1646626055933" duration="3194000" />
+      <workItem from="1646632031487" duration="69000" />
+      <workItem from="1646705754345" duration="640000" />
+      <workItem from="1646874026884" duration="6428000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -341,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646523737695</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="refactor: add class FormValidator for validation forms">
+      <created>1646632086599</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1646632086599</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,6 +387,7 @@
     <MESSAGE value="fix: fixed bugs (1st iteration)" />
     <MESSAGE value="fix: fixed bugs (2nd iteration)" />
     <MESSAGE value="refactor: add class Card for rendering cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: add class Card for rendering cards" />
+    <MESSAGE value="refactor: add class FormValidator for validation forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: add class FormValidator for validation forms" />
   </component>
 </project>

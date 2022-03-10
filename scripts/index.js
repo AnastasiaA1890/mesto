@@ -4,15 +4,11 @@ import {elements, profilePopupButton, cardPopupButton, profileName, profileDescr
     popupFieldDescription, profilePopupCloseButton, cardPopup, formAdd, popupFieldTitle, cardPopupCloseButton, popupFieldSrc,popupAddCardSubmitButton,
     photoPopup, photoPopupImg, photoPopupTitle, photoPopupCloseButton, initialCards, validationList} from "../utils/canstants.js"
 
-function enableValidation(data) {
-    const formList = Array.from(document.querySelectorAll(data.formSelector));
-    formList.forEach(formElement => {
-        const validator = new FormValidator(data, formElement);
-        validator.enableValidation()
-    })
-}
+const editProfileValidator = new FormValidator(validationList, formEditProfile);
+const addCardValidator = new FormValidator(validationList, formAdd);
 
-enableValidation(validationList);
+editProfileValidator.enableValidation();
+addCardValidator.enableValidation();
 
 //Функция создания карточки
 function createCard(item) {
