@@ -7,18 +7,14 @@ export default class FormValidator {
   }
 
   _showInputError(inputElement, errorMessage) {
-    const {inputErrorClass, errorClass} = this._settings;
     const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.add(inputErrorClass);
+    inputElement.classList.add(this._settings.inputErrorClass);
     errorElement.textContent = errorMessage;
-    errorElement.classList.add(errorClass);
   }
 
   _hideInputError(inputElement) {
-    const {inputErrorClass, errorClass} = this._settings;
     const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.remove(inputErrorClass);
-    errorElement.classList.remove(errorClass);
+    inputElement.classList.remove(this._settings.inputErrorClass);
     errorElement.textContent = '';
   }
 
@@ -55,6 +51,17 @@ export default class FormValidator {
       });
     });
   }
+
+  disableButton() {
+    this._buttonElement.classList.add(this._settings.inactiveButtonClass);
+    this._buttonElement.setAttribute('disabled', true);
+  }
+  
+  resetErrors() {
+    this._inputList.forEach((item) => {
+      this._hideInputError(item);
+    })
+}
 
   enableValidation() {
     this._formElement.addEventListener('submit', (evt) => {

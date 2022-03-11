@@ -1,7 +1,7 @@
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
 import {elements, profilePopupButton, cardPopupButton, profileName, profileDescription, profilePopup, formEditProfile, popupFieldName,
-    popupFieldDescription, profilePopupCloseButton, cardPopup, formAdd, popupFieldTitle, cardPopupCloseButton, popupFieldSrc,popupAddCardSubmitButton,
+    popupFieldDescription, profilePopupCloseButton, cardPopup, formAdd, popupFieldTitle, cardPopupCloseButton, popupFieldSrc,
     photoPopup, photoPopupImg, photoPopupTitle, photoPopupCloseButton, initialCards, validationList} from "../utils/canstants.js"
 
 const editProfileValidator = new FormValidator(validationList, formEditProfile);
@@ -44,8 +44,9 @@ function closePopup(element) {
 //Окно EditProfilePopup
 //Функция открытия окна EditProfilePopup
 function openEditProfilePopup () {
-    openPopup(profilePopup);
+    editProfileValidator.resetErrors();
     fillPopup();
+    openPopup(profilePopup);
 }
 
 //Функция заполнения формы EditProfilePopup
@@ -66,6 +67,7 @@ function handleProfileFormSubmit(evt) {
 //Функция открытия и очистки полей окна AddCardPopup после закрытия
 function openAddCardPopup() {
     openPopup(cardPopup);
+    addCardValidator.disableButton();
 }
 
 //Функция добавления новой карточки из функции addCard
@@ -77,8 +79,6 @@ function renderAddedCard(evt) {
     elements.prepend(createCard(newCard));
     closePopup(cardPopup);
     formAdd.reset();
-    popupAddCardSubmitButton.classList.add('popup__button_disabled');
-    popupAddCardSubmitButton.setAttribute('disabled', true);
 }
 
 //Окно photoPopup

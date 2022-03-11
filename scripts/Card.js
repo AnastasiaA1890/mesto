@@ -17,8 +17,9 @@ export default class Card {
 
   generateCard() {
     this._element = this._getTemplate();
-    this._element.querySelector('.element__img').src = this._link;
-    this._element.querySelector('.element__img').alt = this._name;
+    const elementPhoto = this._element.querySelector('.element__img');
+    elementPhoto.src = this._link;
+    elementPhoto.alt = this._name;
     this._element.querySelector('.element__title').textContent = this._name;
     this._setEventListeners();
     return this._element;
@@ -30,6 +31,7 @@ export default class Card {
   
   _deleteCard() {
     this._element.remove();
+    this._element = null;
   }
 
   _setEventListeners() {

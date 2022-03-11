@@ -15,3 +15,9 @@
     line-height: 33px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .profile__name {
+    text-align: center;
+  }
+}

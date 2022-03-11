@@ -1,5 +1,5 @@
 export {elements, profilePopupButton, cardPopupButton, profileName, profileDescription, profilePopup, formEditProfile, popupFieldName,
-  popupFieldDescription, profilePopupCloseButton, cardPopup, formAdd, popupFieldTitle, cardPopupCloseButton, popupFieldSrc,popupAddCardSubmitButton,
+  popupFieldDescription, profilePopupCloseButton, cardPopup, formAdd, popupFieldTitle, cardPopupCloseButton, popupFieldSrc,
   photoPopup, photoPopupImg, photoPopupTitle, photoPopupCloseButton, initialCards, validationList}
 
 //Переменные блока Template
@@ -21,7 +21,6 @@ const formAdd = document.forms.addCard;
 const popupFieldSrc = formAdd.elements.cardLink;
 const popupFieldTitle = formAdd.elements.cardName;
 const cardPopupCloseButton = cardPopup.querySelector('#add-card  button.popup__close-button');
-const popupAddCardSubmitButton = formAdd.querySelector('.popup__button');
 //Переменные PopupPhoto
 const photoPopup = document.querySelector('#open-photo');
 const photoPopupImg = document.querySelector('.popup__img');
@@ -62,5 +61,4 @@ const validationList = ({
   submitButtonSelector: '.popup__button',
   inactiveButtonClass: 'popup__button_disabled',
   inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__error-visible_active'
 });
