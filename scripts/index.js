@@ -1,3 +1,4 @@
+import Section from "./Section.js";
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
 import {elements, profilePopupButton, cardPopupButton, profileName, profileDescription, profilePopup, formEditProfile, popupFieldName,
@@ -16,7 +17,17 @@ function createCard(item) {
     return newCard;
 }
 
-//Функция перебора карточек
+//Отрисовка элементов на странице
+const defaultCardList = new Section({
+    data: initialCards,
+    renderer: (item) => {
+        const card = new Card(item, '#elements-items', openPhotoPopup).generateCard();
+        defaultCardList.addItem(card);
+    }
+  }, elements);
+
+
+/*//Функция перебора карточек
 function render() {
     initialCards.forEach((item)=>{
         elements.appendChild(createCard(item));
@@ -24,7 +35,7 @@ function render() {
 }
 
 //Вызов функции отображение списка карточек
-render();
+render();*/
 
 //Общие функции
 //Функция открытия окна Popup
@@ -119,3 +130,4 @@ photoPopupCloseButton.addEventListener('click', () => closePopup(photoPopup));
 formEditProfile.addEventListener('submit', handleProfileFormSubmit);
 //Функция добавления новой карточки
 formAdd.addEventListener('submit', renderAddedCard);
+defaultCardList.renderItems();

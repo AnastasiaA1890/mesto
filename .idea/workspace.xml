@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: fix bugs 1st iteration">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: fix bugs 2nd iteration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__title/element__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__title/element__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,7 +48,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="liveEdit" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -167,7 +167,16 @@
       <workItem from="1646705754345" duration="640000" />
       <workItem from="1646874026884" duration="7186000" />
       <workItem from="1646959381667" duration="7530000" />
-      <workItem from="1647048399140" duration="314000" />
+      <workItem from="1647048399140" duration="477000" />
+      <workItem from="1647066157348" duration="60000" />
+      <workItem from="1647110960918" duration="2365000" />
+      <workItem from="1647134676094" duration="1848000" />
+      <workItem from="1647231734624" duration="621000" />
+      <workItem from="1647232896531" duration="11000" />
+      <workItem from="1647480408572" duration="601000" />
+      <workItem from="1647573883700" duration="78000" />
+      <workItem from="1647632240227" duration="125000" />
+      <workItem from="1647744916251" duration="5715000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -365,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646979122365</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix: fix bugs 2nd iteration">
+      <created>1647048806696</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1647048806696</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,6 +420,7 @@
     <MESSAGE value="refactor: add class FormValidator for validation forms" />
     <MESSAGE value="refactor: fix class FormValidator for validation forms" />
     <MESSAGE value="fix: fix bugs 1st iteration" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix bugs 1st iteration" />
+    <MESSAGE value="fix: fix bugs 2nd iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix bugs 2nd iteration" />
   </component>
 </project>
