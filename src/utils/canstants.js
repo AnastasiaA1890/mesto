@@ -2,6 +2,13 @@ export {elements, profilePopupButton, cardPopupButton, profileName, profileDescr
   popupFieldDescription, profilePopupCloseButton, cardPopup, formAdd, popupFieldTitle, cardPopupCloseButton, popupFieldSrc,
   photoPopup, photoPopupImg, photoPopupTitle, photoPopupCloseButton, initialCards, validationList}
 
+import yosemiteImg from '../images/yosemite_park.jpg'
+import sequoiaImg from '../images/sequoia_park.jpg'
+import cannonImg from '../images/cannon_beach.jpg'
+import craterImg from '../images/crater_lake.jpg'
+import deathImg from '../images/death_valley.jpg'
+import mountImg from '../images/mount_hood.jpg'
+
 //Переменные блока Template
 const elements = document.querySelector('.elements');
 //Переменные секции Profile
@@ -12,8 +19,8 @@ const profileDescription = document.querySelector('.profile__description');
 //Переменные PopupEdit Form
 const profilePopup = document.querySelector('#edit-profile');
 const formEditProfile = document.forms.editProfile;
-const popupFieldName = formEditProfile.elements.editName;
-const popupFieldDescription = formEditProfile.elements.editAbout;
+const popupFieldName = document.querySelector('.popup__input_field_name');
+const popupFieldDescription = document.querySelector('.popup__input_field_about');
 const profilePopupCloseButton = profilePopup.querySelector('.popup__close-button');
 //Переменные PopupAddCard
 const cardPopup = document.querySelector('#add-card');
@@ -31,27 +38,27 @@ const photoPopupCloseButton = photoPopup.querySelector('#open-photo button.popup
 const initialCards = [
   {
     name: 'Йосемити Парк',
-    link: './images/yosemite_park.jpg'
+    link: yosemiteImg
   },
   {
     name: 'Парк Секвойя',
-    link: './images/sequoia_park.jpg'
+    link: sequoiaImg
   },
   {
     name: 'Пляж Кэннон',
-    link: './images/cannon_beach.jpg'
+    link: cannonImg
   },
   {
     name: 'Озеро Крейтер',
-    link: './images/crater_lake.jpg'
+    link: craterImg
   },
   {
     name: 'Долина смерти',
-    link: './images/death_valley.jpg'
+    link: deathImg
   },
   {
     name: 'Гора Маунт Худ',
-    link: './images/mount_hood.jpg'
+    link: mountImg
   }
 ];
 
