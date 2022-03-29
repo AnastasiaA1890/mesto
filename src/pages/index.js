@@ -59,7 +59,7 @@ function openAddCardPopup() {
     popupAdd.open();
 }
 
-//Функция добавления новой карточки из функции addCard
+//Функция добавления новой карточки
 function renderAddedCard(data) {
     const newCard = {
         name: data.cardName,
@@ -68,7 +68,6 @@ function renderAddedCard(data) {
     popupAdd.close();
 }
 
-//Окно photoPopup
 function handleCardClick(data) {
         popupImage.open(data);
 }
