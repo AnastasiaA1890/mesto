@@ -1,26 +1,26 @@
-import Section from "./Section.js";
-import Card from "./Card.js";
-import FormValidator from "./FormValidator.js";
-import PopupWithImage from "./PopupWithImage.js";
-import PopupWithForm from "./PopupWithForm.js";
-import UserInfo from "./UserInfo.js";
+import Section from "../components/Section.js";
+import Card from "../components/Card.js";
+import FormValidator from "../components/FormValidator.js";
+import PopupWithImage from "../components/PopupWithImage.js";
+import PopupWithForm from "../components/PopupWithForm.js";
+import UserInfo from "../components/UserInfo.js";
 import {elements, profilePopupButton, cardPopupButton, formEditProfile, popupFieldName, popupFieldDescription,
     formAdd, popupFieldTitle, popupFieldSrc, initialCards, validationList} from "../utils/canstants.js"
 
-import '../pages/index.css';
+import './index.css';
 
-const editProfileValidator = new FormValidator(validationList, formEditProfile);
-const addCardValidator = new FormValidator(validationList, formAdd);
+const profileValidator = new FormValidator(validationList, formEditProfile);
+const cardValidator = new FormValidator(validationList, formAdd);
 const popupImage = new PopupWithImage('#open-photo');
-const popupEdit = new PopupWithForm('#edit-profile', handleProfileFormSubmit);
-const popupAdd = new PopupWithForm('#add-card', renderAddedCard);
+const popupEdit = new PopupWithForm('#edit-profile', handleProfileFormSubmit)
+const popupAdd = new PopupWithForm('#add-card', renderAddedCard)
 const userInfo = new UserInfo({
     elementName: '.profile__name',
     elementDescription: '.profile__description'
 });
 
-editProfileValidator.enableValidation();
-addCardValidator.enableValidation();
+profileValidator.enableValidation();
+cardValidator.enableValidation();
 
 //Функция создания карточки
 function createCard(item) {
@@ -31,8 +31,11 @@ function createCard(item) {
 //Отрисовка элементов на странице
 const defaultCardList = new Section({
     data: initialCards,
-    renderer: createCard
+    renderer: (item) => {
+        defaultCardList.addItem(createCard(item));
+    }
   }, elements);
+
 
 //Окно EditProfilePopup
 //Функция открытия окна EditProfilePopup
@@ -40,7 +43,7 @@ function openEditProfilePopup () {
     const userData = userInfo.getUserInfo();
     popupFieldName.value = userData.name;
     popupFieldDescription.value = userData.description;
-    editProfileValidator.resetErrors();
+    profileValidator.resetErrors();
     popupEdit.open();
 }
 
@@ -52,8 +55,8 @@ function handleProfileFormSubmit(data) {
 
 //Окно AddCardPopup
 function openAddCardPopup() {
+    cardValidator.disableButton();
     popupAdd.open();
-    addCardValidator.disableButton();
 }
 
 //Функция добавления новой карточки из функции addCard
@@ -74,8 +77,7 @@ function handleCardClick(data) {
 profilePopupButton.addEventListener('click', openEditProfilePopup);
 //Вызов функции открытия окна AddCardPopup
 cardPopupButton.addEventListener('click', openAddCardPopup);
-//Вызов функции сохранения данных полей формы Popup
-//formEditProfile.addEventListener('submit', handleProfileFormSubmit);
-//Функция добавления новой карточки
-//formAdd.addEventListener('submit', renderAddedCard);
+popupImage.setEventListeners()
+popupEdit.setEventListeners();
+popupAdd.setEventListeners();
 defaultCardList.renderItems();

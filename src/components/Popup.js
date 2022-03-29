@@ -6,12 +6,16 @@ export default class Popup {
 
   open() {
     this._element.classList.add('popup_opened');
-    this.setEventListeners();
+    document.addEventListener('keydown', (evt) => {
+      this._handleEscClose(evt);
+    })
   }
 
   close() {
     this._element.classList.remove('popup_opened');
-    this.setEventListeners();
+    document.removeEventListener('keydown', (evt) => {
+      this._handleEscClose(evt);
+    });
   }
 
   _handleEscClose(evt) {
@@ -30,15 +34,12 @@ export default class Popup {
     profilePopupCloseButton.addEventListener('click', () => {
       this.close();
     });
-    cardPopupCloseButton.addEventListener('click', () => {
+   cardPopupCloseButton.addEventListener('click', () => {
       this.close();
     });
     photoPopupCloseButton.addEventListener('click', () => {
       this.close();
     });
-    document.addEventListener('keydown', (evt) => {
-      this._handleEscClose(evt);
-    })
     this._element.addEventListener('click', (evt) => {
       this._handleOverlayClose(evt);
     })
