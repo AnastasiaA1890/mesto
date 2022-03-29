@@ -11,9 +11,10 @@ import './index.css';
 
 const profileValidator = new FormValidator(validationList, formEditProfile);
 const cardValidator = new FormValidator(validationList, formAdd);
-const popupImage = new PopupWithImage('#open-photo');
-const popupEdit = new PopupWithForm('#edit-profile', handleProfileFormSubmit)
-const popupAdd = new PopupWithForm('#add-card', renderAddedCard)
+const popupImage = new PopupWithImage('#open-photo', openEditProfilePopup);
+const popupEdit = new PopupWithForm('#edit-profile', handleProfileFormSubmit);
+const popupAdd = new PopupWithForm('#add-card', renderAddedCard);
+
 const userInfo = new UserInfo({
     elementName: '.profile__name',
     elementDescription: '.profile__description'
@@ -35,7 +36,6 @@ const defaultCardList = new Section({
         defaultCardList.addItem(createCard(item));
     }
   }, elements);
-
 
 //Окно EditProfilePopup
 //Функция открытия окна EditProfilePopup
@@ -60,10 +60,10 @@ function openAddCardPopup() {
 }
 
 //Функция добавления новой карточки из функции addCard
-function renderAddedCard() {
+function renderAddedCard(data) {
     const newCard = {
-        name: popupFieldTitle.value,
-        link: popupFieldSrc.value};
+        name: data.cardName,
+        link: data.cardLink};
     defaultCardList.addItem(createCard(newCard));
     popupAdd.close();
 }

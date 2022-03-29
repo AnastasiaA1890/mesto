@@ -18,9 +18,9 @@ export default class Card {
   generateCard() {
     this._element = this._getTemplate();
     const elementPhoto = this._element.querySelector('.element__img');
+    this._element.querySelector('.element__title').textContent = this._name;
     elementPhoto.src = this._link;
     elementPhoto.alt = this._name;
-    this._element.querySelector('.element__title').textContent = this._name;
     this._likeButton = this._element.querySelector('.element__like-button');
     this._setEventListeners();
     return this._element;
