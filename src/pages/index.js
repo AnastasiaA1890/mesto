@@ -63,7 +63,8 @@ function openAddCardPopup() {
 function renderAddedCard(data) {
     const newCard = {
         name: data.cardName,
-        link: data.cardLink};
+        link: data.cardLink
+    };
     defaultCardList.addItem(createCard(newCard));
     popupAdd.close();
 }

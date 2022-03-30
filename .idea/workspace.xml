@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="refactor: add new classes">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: fix bugs for 1 interaction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +193,8 @@
       <workItem from="1648340205529" duration="1234000" />
       <workItem from="1648344479112" duration="7332000" />
       <workItem from="1648431072186" duration="9805000" />
-      <workItem from="1648513633130" duration="13136000" />
+      <workItem from="1648513633130" duration="14347000" />
+      <workItem from="1648598292853" duration="1547000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -420,7 +420,28 @@
       <option name="project" value="LOCAL" />
       <updated>1648516528116</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fix: fix bugs for 1 interaction">
+      <created>1648531038911</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1648531038911</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fix: fix bugs for 1 interaction">
+      <created>1648531108525</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1648531108525</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix: fix bugs for 1 interaction">
+      <created>1648531208664</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1648531208664</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,6 +483,7 @@
     <MESSAGE value="fix: fix bugs 2nd iteration" />
     <MESSAGE value="refactor: add Section class" />
     <MESSAGE value="refactor: add new classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: add new classes" />
+    <MESSAGE value="fix: fix bugs for 1 interaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix bugs for 1 interaction" />
   </component>
 </project>

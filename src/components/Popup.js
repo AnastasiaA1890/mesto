@@ -1,21 +1,17 @@
-import {profilePopupCloseButton, cardPopupCloseButton, photoPopupCloseButton} from "../utils/canstants.js"
 export default class Popup {
   constructor(selector) {
     this._element = document.querySelector(selector);
+    this._handleEscClose = this._handleEscClose.bind(this)
   }
 
   open() {
     this._element.classList.add('popup_opened');
-    document.addEventListener('keydown', (evt) => {
-      this._handleEscClose(evt);
-    })
+    document.addEventListener('keydown', this._handleEscClose)
   }
 
   close() {
     this._element.classList.remove('popup_opened');
-    document.removeEventListener('keydown', (evt) => {
-      this._handleEscClose(evt);
-    });
+    document.removeEventListener('keydown', this._handleEscClose)
   }
 
   _handleEscClose(evt) {
@@ -25,21 +21,13 @@ export default class Popup {
   }
 
   _handleOverlayClose(evt) {
-    if(evt.target === evt.currentTarget) {
+    if(evt.target === evt.currentTarget || evt.target.classList.contains('popup__close-button')) {
       this.close();
     }
   }
 
   setEventListeners() {
-    profilePopupCloseButton.addEventListener('click', () => {
-      this.close();
-    });
-   cardPopupCloseButton.addEventListener('click', () => {
-      this.close();
-    });
-    photoPopupCloseButton.addEventListener('click', () => {
-      this.close();
-    });
+
     this._element.addEventListener('click', (evt) => {
       this._handleOverlayClose(evt);
     })
