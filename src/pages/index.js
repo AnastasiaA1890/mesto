@@ -5,7 +5,22 @@ import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import UserInfo from "../components/UserInfo.js";
 import {elements, profilePopupButton, cardPopupButton, formEditProfile, popupFieldName, popupFieldDescription,
-    formAdd, popupFieldTitle, popupFieldSrc, initialCards, validationList} from "../utils/canstants.js"
+    formAdd, popupFieldTitle, popupFieldSrc, initialCards, validationList} from "../utils/canstants.js";
+
+import {api} from "../components/Api.js";
+
+api.getInitialCards()
+  .then((res) => {
+      const data = res.map((item) =>{
+          const newData = {
+              name: item.name,
+              link: item.link
+          }
+          return newData
+      })
+      console.log(data)
+      defaultCardList.renderItems(res)
+  })
 
 import './index.css';
 
@@ -31,7 +46,6 @@ function createCard(item) {
 
 //Отрисовка элементов на странице
 const defaultCardList = new Section({
-    data: initialCards,
     renderer: (item) => {
         defaultCardList.addItem(createCard(item));
     }
@@ -80,4 +94,4 @@ cardPopupButton.addEventListener('click', openAddCardPopup);
 popupImage.setEventListeners()
 popupEdit.setEventListeners();
 popupAdd.setEventListeners();
-defaultCardList.renderItems();
+//defaultCardList.renderItems();

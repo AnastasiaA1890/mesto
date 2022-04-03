@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: fix bugs for 1 interaction">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: fix bugs for 2nd interaction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +196,10 @@
       <workItem from="1648344479112" duration="7332000" />
       <workItem from="1648431072186" duration="9805000" />
       <workItem from="1648513633130" duration="14347000" />
-      <workItem from="1648598292853" duration="1547000" />
+      <workItem from="1648598292853" duration="3231000" />
+      <workItem from="1648965928853" duration="14000" />
+      <workItem from="1649007888856" duration="742000" />
+      <workItem from="1649012338029" duration="13183000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -441,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648531208664</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fix: fix bugs for 2nd interaction">
+      <created>1648601205325</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1648601205325</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +471,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: Added popup functionality" />
     <MESSAGE value="feat: added functionality to add data" />
     <MESSAGE value="fix: fixed the call fillPopup() from openPopup()" />
     <MESSAGE value="fix: html and styles" />
@@ -484,6 +495,7 @@
     <MESSAGE value="refactor: add Section class" />
     <MESSAGE value="refactor: add new classes" />
     <MESSAGE value="fix: fix bugs for 1 interaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix bugs for 1 interaction" />
+    <MESSAGE value="fix: fix bugs for 2nd interaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix bugs for 2nd interaction" />
   </component>
 </project>
