@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto Russia</title>
+<script defer src="index.js"></script><link href="main.css" rel="stylesheet"></head>
+<body class="page">
+  <div class="container">
+    <!-- Секция header -->
+    <header class="header">
+      <a href="#"><img src="1f1e95914acec5e33236.svg" alt="Логотип" class="header__logo"></a>
+    </header>
+    <main class="content">
+      <!-- Секция profile -->
+      <section class="profile">
+        <div class="profile__info">
+          <img src="9a465d27cc4844854ee1.jpg" alt="Аватар пользователя" class="profile__avatar">
+          <div class="profile__fields">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button type="button" aria-label="Кнопка редактирования профиля" class="profile__button"></button>
+            <p class="profile__description">Исследователь океана</p>
+          </div>
+        </div>
+        <button type="button" aria-label="Кнопка добавления карточки" class="profile__add-button"></button>
+      </section>
+      <!-- Секция elements -->
+      <section class="elements">
+      </section>
+    </main>
+    <!-- Секция footer -->
+    <footer class="footer">
+      <p class="footer__copyright">&copy;2021. Mesto Russia</p>
+    </footer>
+    <!-- Окно редактировать профиль -->
+    <div class="popup" id="edit-profile">
+      <div class="popup__container ">
+        <button type="button" aria-label="Кнопка закрытия окна" class="popup__close-button"></button>
+        <form class="popup__form" name="editProfile" novalidate>
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <label class="popup__field">
+            <input type="text" placeholder="Имя" name="editName" class="popup__input popup__input_field_name" id="name-input" required minlength="2" maxlength="40">
+            <span class="popup__error-visible name-input-error"></span>
+          </label>
+          <label class="popup__field">
+            <input type="text" placeholder="О себе" name="editAbout" class="popup__input popup__input_field_about" id="about-input" required minlength="2" maxlength="200">
+            <span class="popup__error-visible about-input-error"></span>
+          </label>
+          <button type="submit" class="popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <!--Окно добавления карточки -->
+    <div class="popup" id="add-card">
+      <div class="popup__container ">
+        <button type="button" aria-label="Кнопка закрытия окна" class="popup__close-button"></button>
+        <form class="popup__form" name="addCard" novalidate>
+          <h2 class="popup__title">Новое место</h2>
+          <label class="popup__field">
+            <input type="text" placeholder="Название" name="cardName" class="popup__input popup__input_title" id="card-input" minlength="2" maxlength="30" required>
+            <span class="popup__error-visible card-input-error"></span>
+          </label>
+          <label class="popup__field">
+            <input type="url" placeholder="Ссылка на картинку" name="cardLink" class="popup__input popup__input_src" id="link-input" required>
+            <span class="popup__error-visible link-input-error"></span>
+          </label>
+          <button type="submit" class="popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <!--Окно фото -->
+    <div class="popup" id="open-photo">
+      <div class="popup__photo-container">
+        <button type="button" aria-label="Кнопка закрытия окна" class="popup__close-button"></button>
+        <img src="#" alt="Фото Парка" class="popup__img">
+        <p class="popup__photo-title"></p>
+      </div>
+    </div>
+    <!-- Шаблон карточки element -->
+    <template id="elements-items">
+      <article class="element">
+        <img src="#" alt="Фото Парка" class="element__img">
+        <button class="element__delete-button" type="button" aria-label="Кнопка удаления карточки"></button>
+        <div class="element__description">
+          <h2 class="element__title"></h2>
+          <button type="button" aria-label="Кнопка понравилось" class="element__like-button"></button>
+        </div>
+      </article>
+    </template>
+  </div>
+</body>
+</html>
