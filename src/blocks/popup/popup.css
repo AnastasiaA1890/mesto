@@ -1,6 +1,6 @@
 .popup {
   display: flex;
-  visibility: hidden; /* убрать после реализации открытия popup */
+  visibility: hidden;
   align-items: center;
   justify-content: center;
   position: fixed;

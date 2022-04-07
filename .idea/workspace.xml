@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="fix: fix bugs for 2nd interaction">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feature: add class Api">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__like-button/element__like-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__like-button/element__like-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__button/popup__button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__button/popup__button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__title/popup__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__title/popup__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupWithImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/canstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/canstants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +209,10 @@
       <workItem from="1648598292853" duration="3231000" />
       <workItem from="1648965928853" duration="14000" />
       <workItem from="1649007888856" duration="742000" />
-      <workItem from="1649012338029" duration="13183000" />
+      <workItem from="1649012338029" duration="16820000" />
+      <workItem from="1649113258339" duration="15196000" />
+      <workItem from="1649205034168" duration="13857000" />
+      <workItem from="1649291345134" duration="13876000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -453,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648601205325</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="feature: add class Api">
+      <created>1649029873832</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1649029873832</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: added functionality to add data" />
     <MESSAGE value="fix: fixed the call fillPopup() from openPopup()" />
     <MESSAGE value="fix: html and styles" />
     <MESSAGE value="fix: html and styles and fonts" />
@@ -496,6 +515,7 @@
     <MESSAGE value="refactor: add new classes" />
     <MESSAGE value="fix: fix bugs for 1 interaction" />
     <MESSAGE value="fix: fix bugs for 2nd interaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix bugs for 2nd interaction" />
+    <MESSAGE value="feature: add class Api" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: add class Api" />
   </component>
 </project>

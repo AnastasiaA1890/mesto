@@ -1,6 +1,6 @@
 export {elements, profilePopupButton, cardPopupButton, profileName, profileDescription, profilePopup, formEditProfile, popupFieldName,
   popupFieldDescription, profilePopupCloseButton, cardPopup, formAdd, popupFieldTitle, cardPopupCloseButton, popupFieldSrc,
-  photoPopup, photoPopupImg, photoPopupTitle, photoPopupCloseButton, initialCards, validationList}
+  photoPopup, photoPopupImg, photoPopupTitle, photoPopupCloseButton, initialCards, validationList, avatarPopup, formAvatarEdit, avatarPopupButton}
 
 import yosemiteImg from '../images/yosemite_park.jpg'
 import sequoiaImg from '../images/sequoia_park.jpg'
@@ -33,6 +33,10 @@ const photoPopup = document.querySelector('#open-photo');
 const photoPopupImg = document.querySelector('.popup__img');
 const photoPopupTitle = document.querySelector('.popup__photo-title');
 const photoPopupCloseButton = photoPopup.querySelector('#open-photo button.popup__close-button')
+//Переменный Avatar
+const avatarPopup = document.querySelector('#avatar');
+const formAvatarEdit = document.forms.avatarEdit
+const avatarPopupButton = document.querySelector('.profile__avatar-button')
 
 //Массив карточек
 const initialCards = [
