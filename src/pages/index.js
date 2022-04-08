@@ -15,7 +15,8 @@ api.getInitialCards()
       const data = res.map((item) =>{
           const newData = {
               name: item.name,
-              link: item.link
+              link: item.link,
+              id: item._id
           }
           return newData
       })
@@ -29,7 +30,7 @@ const popupImage = new PopupWithImage('#open-photo', openEditProfilePopup);
 const popupEdit = new PopupWithForm('#edit-profile', handleProfileFormSubmit);
 const popupAdd = new PopupWithForm('#add-card', renderAddedCard);
 const popupAvatar = new PopupWithForm('#avatar', handleAvatarSubmit);
-const popupDelete = new Popup('#delete-card', openDeleteCardPopup)
+//const popupDelete = new Popup('#delete-card', openDeleteCardPopup)
 
 const userInfo = new UserInfo({
     name: '.profile__name',
@@ -43,8 +44,18 @@ avatarValidator.enableValidation()
 
 //Функция создания карточки
 function createCard(item) {
-    const newCard = new Card(item, '#elements-items', handleCardClick, likeCount).generateCard();
-    return newCard;
+    let newCard = new Card(item, '#elements-items', {
+      handleCardClick,
+      likeCount,
+      handleDeleteCard: (id) => {
+        api.deleteCard(id)
+          .then((res) => {
+            newCard.deleteCard()
+          })
+      },
+    });
+    const card = newCard.generateCard()
+    return card;
 }
 
 function likeCount () {
@@ -72,7 +83,6 @@ function openEditProfilePopup () {
 function handleProfileFormSubmit(data) {
    api.editProfile(data)
       .then((res) => {
-        console.log(res)
         userInfo.setUserInfo(res);
         popupEdit.close();
       });
@@ -90,12 +100,12 @@ function renderAddedCard(data) {
       .then((res) => {
         const newCard = {
           name: data.name,
-          link: data.link
+          link: data.link,
+          id: data._id
         };
         defaultCardList.addItem(createCard(newCard));
         popupAdd.close();
       })
-
 }
 
 function openAvatarPopup() {
@@ -111,21 +121,26 @@ function handleAvatarSubmit(data) {
     });
 }
 
-function openDeleteCardPopup(data) {
+/*function openDeleteCardPopup(data) {
   popupDelete.open(createCard(data))
-}
+}*/
 
 function handleCardClick(data) {
-        popupImage.open(data);
+  popupImage.open(data);
 }
-
 
   api.getUserData()
     .then((res) => {
       return res
     })
 
+/*function handleDeleteCard(id) {
+  api.deleteCard(id)
+    .then((res) => {
 
+      console.log(id)
+    })
+}*/
 
 function renderPage() {
   Promise.all([api.getUserData(), api.getInitialCards()])
@@ -147,6 +162,6 @@ avatarPopupButton.addEventListener('click', openAvatarPopup);
 popupImage.setEventListeners()
 popupEdit.setEventListeners();
 popupAdd.setEventListeners();
-popupDelete.setEventListeners()
+//popupDelete.setEventListeners()
 popupAvatar.setEventListeners()
 

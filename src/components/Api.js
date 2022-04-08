@@ -18,13 +18,14 @@ class Api {
       })
   }
 
-  createCard({name, link}) {
+  createCard({name, link, _id}) {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
         name,
-        link
+        link,
+        _id
       })
     })
       .then((res) => {
@@ -89,7 +90,6 @@ class Api {
       })
     })
       .then((res) => {
-        console.log(res)
         if(res.ok) {
           return res.json();
         } else {
@@ -104,14 +104,25 @@ class Api {
   getUserData() {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers,
-      /*body: JSON.stringify({
-        name,
-        about,
-        avatar
-      })*/
     })
       .then((res) => {
-        console.log(res)
+        if(res.ok) {
+          return res.json();
+        } else {
+          return Promise.reject(`Ошибка: ${res.status}`);
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+
+  deleteCard(id) {
+    return fetch(`${this._baseUrl}/cards/${id}`, {
+      method: 'DELETE',
+      headers: this._headers
+    })
+      .then((res) => {
         if(res.ok) {
           return res.json();
         } else {
