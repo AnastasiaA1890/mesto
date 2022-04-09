@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feature: add class Api, add new styles for popups">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feature: add Delete card method from server and UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +205,9 @@
       <workItem from="1649113258339" duration="15196000" />
       <workItem from="1649205034168" duration="13857000" />
       <workItem from="1649291345134" duration="14441000" />
-      <workItem from="1649384681136" duration="9065000" />
+      <workItem from="1649384681136" duration="9347000" />
+      <workItem from="1649402608114" duration="6000" />
+      <workItem from="1649432967329" duration="25227000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -477,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649311641523</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="feature: add Delete card method from server and UI">
+      <created>1649402453795</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1649402453795</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: html and styles" />
     <MESSAGE value="fix: html and styles and fonts" />
     <MESSAGE value="feat: Added functionality to add a new card" />
     <MESSAGE value="feat: Added functionality to open photoPopup" />
@@ -520,6 +531,7 @@
     <MESSAGE value="fix: fix bugs for 2nd interaction" />
     <MESSAGE value="feature: add class Api" />
     <MESSAGE value="feature: add class Api, add new styles for popups" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: add class Api, add new styles for popups" />
+    <MESSAGE value="feature: add Delete card method from server and UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: add Delete card method from server and UI" />
   </component>
 </project>

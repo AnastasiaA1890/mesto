@@ -18,14 +18,15 @@ class Api {
       })
   }
 
-  createCard({name, link, _id}) {
+  addCard({name, link, _id, likes}) {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
         name,
         link,
-        _id
+        _id,
+        likes
       })
     })
       .then((res) => {
@@ -120,7 +121,8 @@ class Api {
   deleteCard(id) {
     return fetch(`${this._baseUrl}/cards/${id}`, {
       method: 'DELETE',
-      headers: this._headers
+      headers: this._headers,
+
     })
       .then((res) => {
         if(res.ok) {

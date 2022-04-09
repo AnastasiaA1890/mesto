@@ -31,4 +31,10 @@ export default class Popup {
       this._handleOverlayClose(evt);
     })
   }
+
+  _removeEventListeners() {
+    this._element.removeEventListener('click', (evt) => {
+      this._handleOverlayClose(evt);
+    })
+  }
 }
