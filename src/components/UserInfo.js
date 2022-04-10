@@ -1,5 +1,3 @@
-import {popupFieldName, popupFieldDescription} from "../utils/canstants.js";
-
 export default class UserInfo {
   constructor({ name, about, avatar }) {
     this._elementName = document.querySelector(name);

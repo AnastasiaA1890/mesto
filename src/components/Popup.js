@@ -1,7 +1,8 @@
 export default class Popup {
   constructor(selector) {
     this._element = document.querySelector(selector);
-    this._handleEscClose = this._handleEscClose.bind(this)
+    this._handleEscClose = this._handleEscClose.bind(this);
+    this._popupButton = this._element.querySelector('.popup__button');
   }
 
   open() {
@@ -15,13 +16,13 @@ export default class Popup {
   }
 
   _handleEscClose(evt) {
-    if(evt.key==='Escape') {
+    if (evt.key === 'Escape') {
       this.close();
     }
   }
 
   _handleOverlayClose(evt) {
-    if(evt.target === evt.currentTarget || evt.target.classList.contains('popup__close-button')) {
+    if (evt.target === evt.currentTarget || evt.target.classList.contains('popup__close-button')) {
       this.close();
     }
   }
@@ -32,9 +33,11 @@ export default class Popup {
     })
   }
 
-  _removeEventListeners() {
-    this._element.removeEventListener('click', (evt) => {
-      this._handleOverlayClose(evt);
-    })
+  renderLoading(isLoading) {
+    if (isLoading) {
+      this._popupButton.textContent = 'Сохранение...';
+    } else {
+      this._popupButton.textContent = 'Сохранить';
+    }
   }
 }

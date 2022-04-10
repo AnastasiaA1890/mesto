@@ -1,6 +1,6 @@
 export {elements, profilePopupButton, cardPopupButton, profileName, profileDescription, profilePopup, formEditProfile, popupFieldName,
   popupFieldDescription, profilePopupCloseButton, cardPopup, formAdd, popupFieldTitle, cardPopupCloseButton, popupFieldSrc,
-  photoPopup, photoPopupImg, photoPopupTitle, photoPopupCloseButton, initialCards, validationList, avatarPopup, formAvatarEdit, avatarPopupButton}
+  photoPopup, photoPopupImg, photoPopupTitle, photoPopupCloseButton, validationList, avatarPopup, formAvatarEdit, avatarPopupButton}
 
 import yosemiteImg from '../images/yosemite_park.jpg'
 import sequoiaImg from '../images/sequoia_park.jpg'
@@ -37,7 +37,7 @@ const photoPopupCloseButton = photoPopup.querySelector('#open-photo button.popup
 const avatarPopup = document.querySelector('#avatar');
 const formAvatarEdit = document.forms.avatarEdit
 const avatarPopupButton = document.querySelector('.profile__avatar-button')
-
+/*
 //Массив карточек
 const initialCards = [
   {
@@ -64,7 +64,8 @@ const initialCards = [
     name: 'Гора Маунт Худ',
     link: mountImg
   }
-];
+];*/
+
 
 const validationList = ({
   formSelector: '.popup__form',
