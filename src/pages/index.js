@@ -42,11 +42,14 @@ const userInfo = new UserInfo({
   avatar: '.profile__avatar'
 });
 
+profileValidator.enableValidation();
+cardValidator.enableValidation();
+avatarValidator.enableValidation()
+
 api.getUserData()
   .then((res) => {
     userId = res._id;
     userInfo.setUserInfo(res)
-    userInfo.setAvatar(res)
   })
 
 api.getInitialCards()
@@ -65,10 +68,6 @@ api.getInitialCards()
     defaultCardList.renderItems(data)
   })
 
-
-profileValidator.enableValidation();
-cardValidator.enableValidation();
-avatarValidator.enableValidation()
 
 //Функция добавления новой карточки
 function renderAddedCard(data) {
@@ -145,7 +144,10 @@ function handleProfileFormSubmit(data) {
     .then((res) => {
       userInfo.setUserInfo(res);
       popupEdit.close();
-    });
+    })
+    .finally(() => {
+      popupEdit.renderLoading(false)
+  })
 }
 
 //Окно AddCardPopup
@@ -162,10 +164,12 @@ function openAvatarPopup() {
 function handleAvatarSubmit(data) {
   api.editAvatar(data)
     .then((res) => {
-      userInfo.setAvatar(res);
-      console.log(res)
+      userInfo.setUserInfo(res);
       popupAvatar.close();
-    });
+    })
+    .finally(() => {
+      popupAvatar.renderLoading(false)
+  })
 }
 
 function handleCardClick(data) {

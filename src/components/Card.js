@@ -10,7 +10,6 @@ export default class Card {
     this._handleCardClick = handleCardClick;
     this._handleDeleteClick = handleDeleteClick;
     this._handleLikeClick = handleLikeClick;
-    //this._count = 0;
   }
 
   _getTemplate() {

@@ -12,12 +12,10 @@ export default class UserInfo {
     return data;
   }
 
-  setUserInfo({name, about}) {
+  setUserInfo({name, about, avatar}) {
     this._elementName.textContent = name;
     this._elementDescription.textContent = about;
-  }
-
-  setAvatar({avatar}) {
     this._avatarElement.src = avatar;
   }
+
 }

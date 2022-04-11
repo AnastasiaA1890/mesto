@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feature: add Delete card method from server and UI">
+    <list default="true" id="266bb152-43e3-41c4-9d74-7f3f6be11dd1" name="Changes" comment="feature: add Like card method and save button update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopupWithSubmit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/canstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/canstants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +207,8 @@
       <workItem from="1649384681136" duration="9347000" />
       <workItem from="1649402608114" duration="6000" />
       <workItem from="1649432967329" duration="25383000" />
-      <workItem from="1649547169235" duration="15948000" />
+      <workItem from="1649547169235" duration="16111000" />
+      <workItem from="1649634159871" duration="9272000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Added popup functionality">
       <created>1642233922187</created>
@@ -499,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649482830177</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="feature: add Like card method and save button update">
+      <created>1649568852432</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1649568852432</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: html and styles and fonts" />
     <MESSAGE value="feat: Added functionality to add a new card" />
     <MESSAGE value="feat: Added functionality to open photoPopup" />
     <MESSAGE value="feat: Added functionality to close photoPopup" />
@@ -542,6 +546,7 @@
     <MESSAGE value="feature: add class Api" />
     <MESSAGE value="feature: add class Api, add new styles for popups" />
     <MESSAGE value="feature: add Delete card method from server and UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: add Delete card method from server and UI" />
+    <MESSAGE value="feature: add Like card method and save button update" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: add Like card method and save button update" />
   </component>
 </project>

@@ -72,6 +72,20 @@
         </form>
       </div>
     </div>
+    <!--Окно редактирования аватара -->
+    <div class="popup" id="avatar">
+      <div class="popup__container ">
+        <button type="button" aria-label="Кнопка закрытия окна" class="popup__close-button"></button>
+        <form class="popup__form" name="avatarEdit" novalidate>
+          <h2 class="popup__title">Обновить аватар</h2>
+          <label class="popup__field">
+            <input type="url" placeholder="Ссылка на картинку" name="avatar" class="popup__input popup__input_src" id="avatar-input" required>
+            <span class="popup__error-visible avatar-input-error"></span>
+          </label>
+          <button type="submit" class="popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
     <!--Окно фото -->
     <div class="popup" id="open-photo">
       <div class="popup__photo-container">
@@ -87,20 +101,6 @@
         <form class="popup__form" name="deleteCard" novalidate>
           <h2 class="popup__title">Вы уверены?</h2>
           <button type="submit" class="popup__button">Да</button>
-        </form>
-      </div>
-    </div>
-    <!--Окно редактирования аватара -->
-    <div class="popup" id="avatar">
-      <div class="popup__container ">
-        <button type="button" aria-label="Кнопка закрытия окна" class="popup__close-button"></button>
-        <form class="popup__form" name="avatarEdit" novalidate>
-          <h2 class="popup__title">Обновить аватар</h2>
-          <label class="popup__field">
-            <input type="url" placeholder="Ссылка на картинку" name="avatar" class="popup__input popup__input_src" id="avatar-input" required>
-            <span class="popup__error-visible link-input-error"></span>
-          </label>
-          <button type="submit" class="popup__button">Сохранить</button>
         </form>
       </div>
     </div>
