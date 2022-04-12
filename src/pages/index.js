@@ -11,24 +11,9 @@ import {
 import './index.css';
 import {api} from "../components/Api.js";
 
-/*api.getInitialCards()
-  .then(cardList => {
-    cardList.forEach(data => {
-      const newData = {
-        name: data.name,
-        link: data.link,
-        id: data._id,
-        likes: data.likes,
-        userId: userId,
-        ownerId: data.owner._id
-      }
-      defaultCardList.renderItems(newData)
-    })
-  })*/
-
 const profileValidator = new FormValidator(validationList, formEditProfile);
 const cardValidator = new FormValidator(validationList, formAdd);
-const avatarValidator = new FormValidator(validationList, formAvatarEdit)
+const avatarValidator = new FormValidator(validationList, formAvatarEdit);
 const popupImage = new PopupWithImage('#open-photo', openEditProfilePopup);
 const popupEdit = new PopupWithForm('#edit-profile', handleProfileFormSubmit);
 const popupAdd = new PopupWithForm('#add-card', renderAddedCard);
@@ -44,8 +29,9 @@ const userInfo = new UserInfo({
 
 profileValidator.enableValidation();
 cardValidator.enableValidation();
-avatarValidator.enableValidation()
+avatarValidator.enableValidation();
 
+/*
 api.getUserData()
   .then((res) => {
     userId = res._id;
@@ -67,7 +53,7 @@ api.getInitialCards()
     })
     defaultCardList.renderItems(data)
   })
-
+*/
 
 //Функция добавления новой карточки
 function renderAddedCard(data) {
@@ -82,13 +68,15 @@ function renderAddedCard(data) {
         ownerId: res.owner._id
       })
       defaultCardList.addItem(newData);
+      popupAdd.close();
+    })
+    .catch((err) => {
+      console.log(err)
     })
     .finally(() => {
       popupAdd.renderLoading(false)
     })
-  popupAdd.close();
 }
-
 
 //Функция создания карточки
 function createCard(item) {
@@ -98,10 +86,14 @@ function createCard(item) {
       popupDelete.open();
       popupDelete.changeSubmitHandler(() => {
         api.deleteCard(id)
-          .then((res) => {
-            card.deleteCard()
+          .then(() => {
+            card.deleteCard();
+            popupDelete.renderLoading(false, '#delete-card');
+            popupDelete.close();
           })
-        popupDelete.close()
+          .catch((err) => {
+            console.log(err);
+          })
       })
     },
     (id) => {
@@ -110,10 +102,16 @@ function createCard(item) {
           .then((res) => {
             card.setLikes(res.likes)
           })
+          .catch((err) => {
+            console.log(err)
+          })
       } else {
         api.addLike(id)
           .then((res) => {
             card.setLikes(res.likes)
+          })
+          .catch((err) => {
+            console.log(err)
           })
       }
     }
@@ -145,6 +143,9 @@ function handleProfileFormSubmit(data) {
       userInfo.setUserInfo(res);
       popupEdit.close();
     })
+    .catch((err) => {
+      console.log(err)
+    })
     .finally(() => {
       popupEdit.renderLoading(false)
   })
@@ -153,11 +154,13 @@ function handleProfileFormSubmit(data) {
 //Окно AddCardPopup
 function openAddCardPopup() {
   cardValidator.disableButton();
+  cardValidator.resetErrors()
   popupAdd.open();
 }
 
 function openAvatarPopup() {
   avatarValidator.disableButton();
+  avatarValidator.resetErrors();
   popupAvatar.open();
 }
 
@@ -166,6 +169,9 @@ function handleAvatarSubmit(data) {
     .then((res) => {
       userInfo.setUserInfo(res);
       popupAvatar.close();
+    })
+    .catch((err) => {
+      console.log(err)
     })
     .finally(() => {
       popupAvatar.renderLoading(false)
@@ -176,17 +182,30 @@ function handleCardClick(data) {
   popupImage.open(data);
 }
 
-/*function renderPage() {
+function renderPage() {
   Promise.all([api.getUserData(), api.getInitialCards()])
-    .then((res) => {
-      userInfo.setUserInfo(res[0]);
-      userInfo.setAvatar(res[0]);
-      defaultCardList.renderItems(res[1]);
-      console.log(res)
+    .then(([userData, cards]) => {
+      userId = userData._id;
+      userInfo.setUserInfo(userData);
+      const data = cards.map((item) => {
+        const newData = {
+          name: item.name,
+          link: item.link,
+          id: item._id,
+          likes: item.likes,
+          userId: userId,
+          ownerId: item.owner._id
+        }
+        return newData
+      })
+      defaultCardList.renderItems(data)
     })
+    .catch((err) => {
+      console.log(err)
+  })
 }
 
-renderPage()*/
+renderPage()
 
 //Вызов функции открытия окна EditProfilePopup
 profilePopupButton.addEventListener('click', openEditProfilePopup);

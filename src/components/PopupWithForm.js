@@ -1,11 +1,12 @@
 import Popup from "./Popup.js";
 
-export default class PopupWithForm extends Popup{
+export default class PopupWithForm extends Popup {
   constructor(selector, handleSubmitForm) {
     super(selector);
     this._handleSubmitForm = handleSubmitForm;
     this._form = this._element.querySelector('.popup__form');
     this._inputList = Array.from(this._form.querySelectorAll('.popup__input'));
+    this._popupButton = this._element.querySelector('.popup__button');
   }
 
   _getInputValues() {
@@ -32,5 +33,17 @@ export default class PopupWithForm extends Popup{
   close() {
     super.close();
     this._form.reset();
+  }
+
+  renderLoading(isLoading, element) {
+    if (isLoading) {
+      this._popupButton.textContent = 'Сохранение...';
+    } else {
+      if (element === '#delete-card') {
+        this._popupButton.textContent = 'Да';
+      } else {
+        this._popupButton.textContent = 'Сохранить';
+      }
+    }
   }
 }

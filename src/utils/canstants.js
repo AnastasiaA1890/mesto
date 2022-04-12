@@ -35,8 +35,11 @@ const photoPopupTitle = document.querySelector('.popup__photo-title');
 const photoPopupCloseButton = photoPopup.querySelector('#open-photo button.popup__close-button')
 //Переменный Avatar
 const avatarPopup = document.querySelector('#avatar');
-const formAvatarEdit = document.forms.avatarEdit
-const avatarPopupButton = document.querySelector('.profile__avatar-button')
+const formAvatarEdit = document.forms.avatarEdit;
+const avatarPopupButton = document.querySelector('.profile__avatar-button');
+//Переменные DeletePopup
+const popupDelete = document.querySelector('#delete-card');
+const popupDeleteSave = document.forms.deleteCard;
 /*
 //Массив карточек
 const initialCards = [

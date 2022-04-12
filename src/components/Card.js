@@ -28,6 +28,7 @@ export default class Card {
     elementPhoto.src = this._link;
     elementPhoto.alt = this._name;
     this._likeButton = this._element.querySelector('.element__like-button');
+    this._likeCountElement = this._element.querySelector('.element__like-counter');
     this._setEventListeners();
     this.setLikes(this._likes);
     if (this._ownerid !== this._userId) {
@@ -43,8 +44,7 @@ export default class Card {
 
   setLikes(newLikes) {
     this._likes = newLikes;
-    const likeCountElement = this._element.querySelector('.element__like-counter');
-    likeCountElement.textContent = this._likes.length;
+    this._likeCountElement.textContent = this._likes.length;
     if (this.isLiked()) {
       this._colorLike();
     } else {
