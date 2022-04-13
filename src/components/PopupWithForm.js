@@ -35,15 +35,11 @@ export default class PopupWithForm extends Popup {
     this._form.reset();
   }
 
-  renderLoading(isLoading, element) {
+  renderLoading(isLoading, buttonText='Сохранить') {
     if (isLoading) {
       this._popupButton.textContent = 'Сохранение...';
     } else {
-      if (element === '#delete-card') {
-        this._popupButton.textContent = 'Да';
-      } else {
-        this._popupButton.textContent = 'Сохранить';
-      }
+      this._popupButton.textContent = buttonText;
     }
   }
 }

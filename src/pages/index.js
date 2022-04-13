@@ -88,12 +88,15 @@ function createCard(item) {
         api.deleteCard(id)
           .then(() => {
             card.deleteCard();
-            popupDelete.renderLoading(false, '#delete-card');
             popupDelete.close();
           })
           .catch((err) => {
             console.log(err);
           })
+          .finally(() => {
+            popupDelete.renderLoading(false, 'Да')
+          })
+
       })
     },
     (id) => {
